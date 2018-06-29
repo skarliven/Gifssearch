@@ -15,6 +15,8 @@ function getGifs() {
 
 var userInput = document.getElementById("userInput").value;
 var numGifs = document.getElementById("numGifs").value;
+var originalURL = "http://api.giphy.com/v1/gifs/search?q=";
+    var queryURL = "https://cors-anywhere.herokuapp.com/" + originalURL
 
 $.ajax({
   url: "http://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=i0NwF1Awg8DlkZF0TqqVgCKn0hAckF3c&limit=" + numGifs,
